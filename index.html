@@ -42,21 +42,22 @@
       transform:skew(10deg,20deg);
       background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      gap: 10px;
     }
     .side.one .foto-novia {
       width: 90%;
-      height: 0%;
+      height: 31%; /* 3 fotos con espacio entre ellas */
       object-fit: cover;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      /* Desinclina la foto para que se vea recta dentro del div inclinado */
       transform: skew(-10deg,-20deg);
-      /* Opcional: agrega un borde bonito */
       border: 4px solid #ffb6c1;
       background: #fff;
       transition: box-shadow 0.3s;
+      display: block;
     }
     .side.one .foto-novia:hover {
       box-shadow: 0 8px 32px rgba(255,0,100,0.25);
@@ -202,8 +203,10 @@
   </div>
   <div id="card">
     <div class="side one">
-      <!-- Cambia la URL de abajo por la de tu foto -->
-      <img class="foto-novia" src="img/ana.jpeg" alt="Foto de mi novia">
+      <!-- Cambia las rutas de las fotos por las que tú quieras -->
+      <img class="foto-novia" src="img/ana1.jpg" alt="Foto 1 de mi novia">
+      <img class="foto-novia" src="img/ana2.jpg" alt="Foto 2 de mi novia">
+      <img class="foto-novia" src="img/ana3.jpg" alt="Foto 3 de mi novia">
     </div>
     <div class="side two">
       <h2>Brenda Allison</h2>
