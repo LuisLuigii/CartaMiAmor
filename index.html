@@ -13,27 +13,25 @@
       padding: 0;
     }
     body {
-      min-height: 100vh;
-      min-width: 100vw;
       display: flex;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
       font-family: 'Quicksand', Arial, sans-serif;
       background-color: #f1e3d3;
-      overflow-x: hidden;
+      overflow: hidden;
     }
     #card {
-      width: 800px;
-      height: 500px;
-      margin: 0 auto;
-      display: flex;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-      border-radius: 18px;
-      background: #fff;
-      visibility: hidden;
-      position: relative;
-      z-index: 2;
-      transition: box-shadow 0.3s;
+      height:500px;
+      width:800px;
+      margin:0 auto;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display:flex;
+      visibility:hidden;
+      z-index: 10;
     }
     #card h2 {
       font-family: 'Sacramento', cursive;
@@ -45,7 +43,7 @@
     }
     #card p {
       font-family: 'Quicksand', Arial, sans-serif;
-      font-size: 0.95em;
+      font-size: 0.9em;
       line-height: 1.5;
       text-align: justify;
       padding-left: 20px;
@@ -55,21 +53,19 @@
     }
     .side {
       background:#eee;
-      height:100%;
+      height:500px;
       width:400px;
       padding:10px;
       box-sizing: border-box;
       overflow: hidden;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
     .side.one {
       width:320px;
-      min-width: 180px;
       transform:skew(10deg,20deg);
       background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
@@ -92,18 +88,13 @@
       box-shadow: 0 8px 32px rgba(255,0,100,0.25);
     }
     .side.two {
-      flex: 1 1 0;
-      min-width: 200px;
       transform:skew(10deg,-15deg);
       background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
     .valentines-day {
       position: relative;
       cursor: pointer;
-      z-index: 3;
+      z-index: 20;
     }
     .envelope {
       position: relative;
@@ -211,26 +202,26 @@
       transform: translateY(-50px);
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
+    /* SOLO AJUSTES PARA CELULAR */
+    @media (max-width: 600px) {
       #card {
         width: 98vw;
-        height: 90vh;
-        min-height: 400px;
+        min-width: 0;
+        max-width: 100vw;
+        height: 90vw;
+        min-height: 350px;
+        max-height: 98vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        left: 0;
-        top: 0;
-        margin: 0;
-        border-radius: 12px;
       }
       .side {
         width: 100% !important;
         min-width: 0 !important;
-        height: auto;
-        min-height: 180px;
-        padding: 8px;
+        height: 50%;
+        min-height: 0;
+        padding: 6px;
       }
       .side.one, .side.two {
         transform: none;
@@ -244,18 +235,18 @@
         justify-content: center;
         align-items: flex-start;
         gap: 8px;
-        padding-top: 16px;
+        padding-top: 10px;
         padding-bottom: 8px;
       }
       .side.one .foto-novia {
-        width: 30vw;
-        min-width: 70px;
-        max-width: 100px;
-        height: 18vw;
-        min-height: 70px;
-        max-height: 100px;
+        width: 28vw;
+        min-width: 55px;
+        max-width: 90px;
+        height: 16vw;
+        min-height: 55px;
+        max-height: 90px;
         margin: 0 4px;
-        border-radius: 12px;
+        border-radius: 8px;
         transform: none;
       }
       .foto-novia.primera, .foto-novia.ultima {
@@ -264,42 +255,16 @@
       }
       .side.two {
         padding-top: 0;
-        padding-bottom: 16px;
-      }
-      #card h2 {
-        font-size: 1.3em;
-        margin-top: 10px;
-      }
-      #card p {
-        font-size: 0.85em;
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-    }
-    @media (max-width: 600px) {
-      #card {
-        width: 99vw;
-        height: auto;
-        min-height: 0;
-        border-radius: 8px;
-      }
-      .side {
-        padding: 4px;
-      }
-      .side.one .foto-novia {
-        width: 28vw;
-        min-width: 55px;
-        max-width: 80px;
-        height: 16vw;
-        min-height: 55px;
-        max-height: 80px;
-        border-radius: 8px;
+        padding-bottom: 10px;
       }
       #card h2 {
         font-size: 1.1em;
+        margin-top: 10px;
       }
       #card p {
         font-size: 0.8em;
+        padding-left: 8px;
+        padding-right: 8px;
       }
     }
   </style>
@@ -320,7 +285,7 @@
     <div class="side two">
       <h2>Para mi mushashaa</h2>
       <p>Onaaaaa mi amoooor,</p>
-      <p>Quiero empezar pidiéndote mi más sincero perdón, yo sé que te he fallado demasiadas veces y estoy muy arrepentido de ellas porque sé que estuve mal, no quiero perderte y es que la verdad, no me veo sin ti. Te amo tanto que cuando tenemos una discusión, ya sea la más mínima, me desespero por el que ya estemos abrazándonos y besándonos como todos los días. Estoy más que dispuesto a mejorar por ti y poderte demostrar mi mejor versión. Haré hasta lo imposible para que vuelvas a sentirte amada y querida como en aquellos días donde nos reíamos sin parar. Te amo, eres la persona con la que quiero mi futuro y con la que quiero llegar a casarme. Quiero que seas la persona que vea todos los días al dormir y al despertar. Quiero que seas la persona a la que vea feliz a mi lado, y con la que pueda compartir todo el tiempo que nos dé la vida. Simplemente, quiero que seas tú.</p>
+      <p>Quiero empezar pidiéndote mi más sincero perdón, yo sé que te he fallado demasiadas veces y estoy muy arrepentido de ellas porque sé que estuve mal, no quiero perderte y es que la verdad, no me veo sin ti. Te amo tanto que cuando tenemos una discusión, ya sea la más mínima, me desespero por el que ya estemos abrazándonos y besándonos como todos los días. Estoy más que dispuesto a mejorar por ti y poderte demostrar mi mejor versión. Haré hasta lo imposible para que vuelvas a sentirte amada y querida como en aquellos dias donde nos reiamos sin parar. Te amo, eres la persona con la que quiero mi futuro y con la que quiero llegar a casarme. Quiero que seas la persona que vea todos los días al dormir y al despertar. Quiero que seas la persona a la que vea feliz a mi lado, y con la que pueda compartir todo el tiempo que nos dé la vida. Simplemente, quiero que seas tú.</p>
       <p>Mi lugar seguro ❣️</p>
     </div>
   </div>
