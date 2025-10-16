@@ -197,7 +197,7 @@
       transform: translateY(-50px);
     }
     /* --- INICIA EL AJUSTE PARA CELULAR --- */
-   @media (max-width: 600px) {
+    @media (max-width: 600px) {
   #card {
     width: 98vw !important;
     height: auto !important;
@@ -205,65 +205,48 @@
     min-width: 0 !important;
     min-height: 0 !important;
     box-sizing: border-box !important;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 10px auto !important;
-    flex-direction: column !important;
   }
   .side {
-    width: 100vw !important;
+    width: 49vw !important;
     height: auto !important;
     min-width: 0 !important;
     min-height: 0 !important;
     max-height: none !important;
-    padding: 6px !important;
+    padding: 4px !important;
     box-sizing: border-box !important;
-    flex: none !important;
+    overflow: visible !important;
   }
   .side.one {
-    width: 100vw !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 6px !important;
-    transform: none !important;
-    background: linear-gradient(90deg, #fff, #fff 60%, #ddd) !important;
+    width: 39vw !important;
+    gap: 4px !important;
   }
   .side.one .foto-novia {
-    width: 28vw !important;
-    height: auto !important;
-    max-width: 90px !important;
-    max-height: 90px !important;
-    border-radius: 12px !important;
-    margin: 0 2vw !important;
+    width: 65% !important;
+    height: 22vw !important;
+    max-width: 100% !important;
+    max-height: 80px !important;
+    border-radius: 10px !important;
+    margin: 0 !important;
     transform: skew(-10deg,-20deg) !important;
-    display: block !important;
   }
   .foto-novia.primera, .foto-novia.ultima {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
   .side.two {
-    width: 100vw !important;
     min-width: 0 !important;
-    padding: 0 8px !important;
-    transform: none !important;
-    background: linear-gradient(-90deg, #fff, #fff 60%, #f0f0f0) !important;
+    padding: 0 !important;
   }
   #card h2 {
     font-size: 1.1em !important;
     margin-top: 8px !important;
     margin-bottom: 8px !important;
-    text-align: center !important;
   }
   #card p {
-    font-size: 0.62em !important;
-    padding-left: 4px !important;
-    padding-right: 4px !important;
+    font-size: 0.65em !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     margin: 6px 0 !important;
-    text-align: justify !important;
   }
 }
 
