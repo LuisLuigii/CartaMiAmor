@@ -33,11 +33,33 @@
       height:550px;
       width:400px;
       padding:10px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
     }
     .side.one {
       width:320px;
       transform:skew(10deg,20deg);
       background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .side.one .foto-novia {
+      width: 90%;
+      height: 85%;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      /* Desinclina la foto para que se vea recta dentro del div inclinado */
+      transform: skew(-10deg,-20deg);
+      /* Opcional: agrega un borde bonito */
+      border: 4px solid #ffb6c1;
+      background: #fff;
+      transition: box-shadow 0.3s;
+    }
+    .side.one .foto-novia:hover {
+      box-shadow: 0 8px 32px rgba(255,0,100,0.25);
     }
     .side.two {
       transform:skew(10deg,-15deg);
@@ -179,7 +201,10 @@
     <div class="front"></div>
   </div>
   <div id="card">
-    <div class="side one"></div>
+    <div class="side one">
+      <!-- Cambia la URL de abajo por la de tu foto -->
+      <img class="foto-novia" src="URL_DE_LA_FOTO" alt="Foto de mi novia">
+    </div>
     <div class="side two">
       <h2>Brenda Allison</h2>
       <p>Querida Brenda,</p>
