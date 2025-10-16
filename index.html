@@ -195,58 +195,59 @@
     }
     /* --- INICIA EL AJUSTE PARA CELULAR --- */
     @media (max-width: 600px) {
-      #card {
-        width: 98vw !important;
-        height: 61vw !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        max-width: 100vw !important;
-        max-height: 100vw !important;
-        left: 1vw !important;
-        top: 2vw !important;
-        margin: 0 !important;
-        position: fixed !important;
-        display: flex !important;
-      }
-      .side {
-        width: 49vw !important;
-        height: 61vw !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        padding: 4px !important;
-      }
-      .side.one {
-        width: 39vw !important;
-        gap: 4px !important;
-      }
-      .side.one .foto-novia {
-        width: 90% !important;
-        height: 28% !important;
-        min-width: 0 !important;
-        min-height: 0 !important;
-        max-width: 100% !important;
-        max-height: 100px !important;
-        border-radius: 8px !important;
-        margin: 0 0 0 0 !important;
-        transform: skew(-10deg,-20deg) !important;
-      }
-      .foto-novia.primera, .foto-novia.ultima {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-      }
-      .side.two {
-        min-width: 0 !important;
-      }
-      #card h2 {
-        font-size: 1em !important;
-        margin-top: 10px !important;
-      }
-      #card p {
-        font-size: 0.75em !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-      }
-    }
+  #card {
+    width: 98vw !important;
+    height: 61vw !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100vw !important;
+    max-height: 100vw !important;
+    left: 50vw !important;
+    top: 50vw !important;
+    margin: 0 !important;
+    position: fixed !important;
+    display: flex !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .side {
+    width: 49vw !important;
+    height: 61vw !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 4px !important;
+  }
+  .side.one {
+    width: 39vw !important;
+    gap: 4px !important;
+  }
+  .side.one .foto-novia {
+    width: 90% !important;
+    height: 28% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: 100% !important;
+    max-height: 100px !important;
+    border-radius: 8px !important;
+    margin: 0 0 0 0 !important;
+    transform: skew(-10deg,-20deg) !important;
+  }
+  .foto-novia.primera, .foto-novia.ultima {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .side.two {
+    min-width: 0 !important;
+  }
+  #card h2 {
+    font-size: 1em !important;
+    margin-top: 10px !important;
+  }
+  #card p {
+    font-size: 0.75em !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
     @media (max-width: 900px) {
       #card, .side, .side.one, .side.two {
         width: 95vw !important;
